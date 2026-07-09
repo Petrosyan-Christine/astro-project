@@ -1,17 +1,48 @@
 ---
-
+import Layout from "../layouts/Layout.astro";
+import AppHeader from "../components/AppHeader.astro";
+import Dropzone from "../components/Dropzone.astro";
+import SettingsPanel from "../components/SettingsPanel.astro";
+import Toolbar from "../components/Toolbar.astro";
+import FileList from "../components/FileList.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+  <main class="app">
+    <AppHeader />
+    <Dropzone />
+    <section id="workspace" class="hidden">
+      <SettingsPanel />
+      <Toolbar />
+      <FileList />
+    </section>
+  </main>
+
+  <div id="toast" class="toast hidden"></div>
+  <canvas id="canvas" class="hidden" aria-hidden="true"></canvas>
+</Layout>
+
+<script src="../scripts/converter.ts"></script>
+
+<style>
+  .app {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px 60px;
+  }
+  .toast {
+    position: fixed;
+    left: 50%;
+    bottom: 28px;
+    transform: translateX(-50%);
+    background: #17171c;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 12px 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    animation: toastIn 0.22s ease;
+  }
+</style>

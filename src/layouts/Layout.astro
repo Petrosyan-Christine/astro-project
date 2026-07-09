@@ -1,0 +1,101 @@
+---
+interface Props {
+  title?: string;
+}
+const { title = "Reformat — Image Converter" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <slot />
+    <style is:global>
+      :root {
+        --acc: #5a54e8;
+        --acc-ink: #4a44d6;
+        --acc-soft: #efeefc;
+        --bg: #f7f7f8;
+        --ink: #17171c;
+        --muted: #63636e;
+        --faint: #9a9aa4;
+        --line: #e9e9ee;
+        --line-2: #e1e1e8;
+        --fill: #f4f4f6;
+        --ok: #12864c;
+        --err: #d23b36;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        font-family: "Hanken Grotesk", system-ui, sans-serif;
+        color: var(--ink);
+        -webkit-font-smoothing: antialiased;
+      }
+      a {
+        color: var(--acc-ink);
+        text-decoration: none;
+      }
+      a:hover {
+        color: var(--acc);
+        text-decoration: underline;
+      }
+      button {
+        font-family: inherit;
+      }
+      input,
+      select {
+        font-family: inherit;
+      }
+      ::selection {
+        background: var(--acc-soft);
+      }
+      .display {
+        font-family: "Bricolage Grotesque", "Hanken Grotesk", sans-serif;
+      }
+      .hidden {
+        display: none !important;
+      }
+
+      @keyframes toastIn {
+        from {
+          opacity: 0;
+          transform: translate(-50%, 12px);
+        }
+        to {
+          opacity: 1;
+          transform: translate(-50%, 0);
+        }
+      }
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(6px);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+    </style>
+  </body>
+</html>

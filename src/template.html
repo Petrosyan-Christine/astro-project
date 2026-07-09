@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="8c6e233e-72ef-4b12-94b5-1d317d8d4cb5"></script>
+</head>
+<body>
+
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<style>/* vietnamese */
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("a19047ce-0e74-433d-912b-ff0605dc88b2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("5c89614d-34c9-4e10-bde4-27a5e4de4690") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("f5f270f1-a8cb-4f41-82f7-5f9ff59c7b15") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("a19047ce-0e74-433d-912b-ff0605dc88b2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("5c89614d-34c9-4e10-bde4-27a5e4de4690") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("f5f270f1-a8cb-4f41-82f7-5f9ff59c7b15") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("a19047ce-0e74-433d-912b-ff0605dc88b2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("5c89614d-34c9-4e10-bde4-27a5e4de4690") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("f5f270f1-a8cb-4f41-82f7-5f9ff59c7b15") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("16167023-2905-49e4-8e6a-cb3279fa868a") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("45ceaaf7-8cd5-4ebe-aed1-8201f71942f7") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("5e9ace1b-8bf2-471c-b185-ece8cbe5cd5f") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("58fb648c-8ae8-4f49-8d38-bcd4f33a1eea") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("16167023-2905-49e4-8e6a-cb3279fa868a") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("45ceaaf7-8cd5-4ebe-aed1-8201f71942f7") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("5e9ace1b-8bf2-471c-b185-ece8cbe5cd5f") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("58fb648c-8ae8-4f49-8d38-bcd4f33a1eea") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("16167023-2905-49e4-8e6a-cb3279fa868a") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("45ceaaf7-8cd5-4ebe-aed1-8201f71942f7") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("5e9ace1b-8bf2-471c-b185-ece8cbe5cd5f") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("58fb648c-8ae8-4f49-8d38-bcd4f33a1eea") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("16167023-2905-49e4-8e6a-cb3279fa868a") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("45ceaaf7-8cd5-4ebe-aed1-8201f71942f7") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("5e9ace1b-8bf2-471c-b185-ece8cbe5cd5f") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("58fb648c-8ae8-4f49-8d38-bcd4f33a1eea") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<style>
+  *{box-sizing:border-box;}
+  body{margin:0;background:#F7F7F8;font-family:'Hanken Grotesk',system-ui,sans-serif;color:#17171C;-webkit-font-smoothing:antialiased;}
+  a{color:var(--acc-ink,#4A44D6);text-decoration:none;}
+  a:hover{color:var(--acc,#5A54E8);text-decoration:underline;}
+  button{font-family:inherit;}
+  input,select{font-family:inherit;}
+  ::selection{background:var(--acc-soft,#EFEEFC);}
+  @keyframes toastIn{from{opacity:0;transform:translate(-50%,12px);}to{opacity:1;transform:translate(-50%,0);}}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:none;}}
+</style>
+</helmet>
+
+<div style="{{ rootStyle }}">
+
+  <!-- ============ DEMO STATE SWITCHER (mockup chrome, not the product) ============ -->
+  <div style="position:sticky;top:0;z-index:40;background:#111116;padding:11px 20px;display:flex;align-items:center;gap:14px;box-shadow:0 1px 0 rgba(255,255,255,.06);">
+    <span style="color:rgba(255,255,255,.42);font-size:11px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;white-space:nowrap;">View state</span>
+    <div style="display:flex;gap:7px;flex-wrap:wrap;">
+      <sc-for list="{{ stateTabs }}" as="t" hint-placeholder-count="6">
+        <button onclick="{{ setView }}" data-v="{{ t.key }}" style="{{ t.style }}">{{ t.label }}</button>
+      </sc-for>
+    </div>
+  </div>
+
+  <!-- ============ DESKTOP APP ============ -->
+  <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+  <div style="max-width:900px;margin:0 auto;padding:0 24px 0;">
+
+    <!-- Header -->
+    <header style="display:flex;align-items:center;justify-content:space-between;padding:22px 0 16px;">
+      <div style="display:flex;align-items:center;gap:11px;">
+        <div style="width:34px;height:34px;border-radius:9px;background:var(--acc,#5A54E8);display:flex;align-items:center;justify-content:center;color:#fff;">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h13l-3-3"></path><path d="M20 16H7l3 3"></path></svg>
+        </div>
+        <span style="font-family:'Bricolage Grotesque';font-weight:700;font-size:20px;letter-spacing:-.01em;">Reformat</span>
+      </div>
+      <nav style="display:flex;align-items:center;gap:22px;">
+        <a href="#formats" style="font-size:14px;font-weight:500;color:#63636E;">Formats</a>
+        <a href="#faq" style="font-size:14px;font-weight:500;color:#63636E;">FAQ</a>
+        <button style="background:#fff;border:1px solid #E1E1E8;border-radius:9px;padding:8px 16px;font-size:14px;font-weight:600;color:#17171C;cursor:pointer;" style-hover="border-color:#C9C9D2;">Sign in</button>
+      </nav>
+    </header>
+
+    <!-- Hero (empty only) -->
+    <sc-if value="{{ isEmpty }}">
+      <div style="text-align:center;padding:26px 0 24px;">
+        <h1 style="font-family:'Bricolage Grotesque';font-size:40px;font-weight:600;letter-spacing:-.025em;margin:0 0 10px;line-height:1.05;">Convert images to any format</h1>
+        <p style="color:#63636E;font-size:16.5px;margin:0;max-width:520px;margin:0 auto;">Drag, drop, and convert between JPG, PNG, WEBP, AVIF, PDF and more — right in your browser.</p>
+      </div>
+    </sc-if>
+
+    <!-- ---------- EMPTY STATE: DROPZONE ---------- -->
+    <sc-if value="{{ isEmpty }}">
+    <div ondragover="{{ onDragOver }}" ondragleave="{{ onDragLeave }}" ondrop="{{ onDrop }}" onclick="{{ goQueue }}" role="button" tabindex="0" aria-label="Drop image files here or activate to choose files" style="{{ dropStyle }} border-radius:20px;padding:52px 32px;text-align:center;cursor:pointer;" style-hover="border-color:var(--acc,#5A54E8);">
+      <div style="width:66px;height:66px;border-radius:50%;background:var(--acc-soft,#EFEEFC);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--acc,#5A54E8)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4"></path><path d="M7 9l5-5 5 5"></path><path d="M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"></path></svg>
+      </div>
+      <div style="font-size:19px;font-weight:600;margin-bottom:5px;">Drag &amp; drop images here</div>
+      <div style="color:#9A9AA4;font-size:14px;margin-bottom:18px;">or</div>
+      <button style="background:var(--acc,#5A54E8);color:#fff;border:none;border-radius:11px;padding:12px 26px;font-weight:600;font-size:15px;cursor:pointer;box-shadow:0 4px 12px rgba(90,84,232,.24);" style-hover="background:var(--acc-ink,#4A44D6);">Choose files</button>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;justify-content:center;max-width:520px;margin:26px auto 0;">
+        <sc-for list="{{ formatOptions }}" as="fmt" hint-placeholder-count="10">
+          <span style="font-size:11.5px;font-weight:600;color:#63636E;background:#F1F1F4;border:1px solid #E7E7EC;border-radius:6px;padding:3px 9px;">{{ fmt }}</span>
+        </sc-for>
+      </div>
+      <div style="color:#9A9AA4;font-size:12.5px;margin-top:16px;">Up to {{ maxSize }} MB per file · up to 50 files · everything stays on your device</div>
+    </div>
+
+    <sc-if value="{{ showPaste }}">
+    <div style="display:flex;align-items:center;gap:14px;margin:22px auto 0;max-width:520px;">
+      <div style="flex:1;height:1px;background:#E7E7EC;"></div>
+      <span style="color:#9A9AA4;font-size:12.5px;font-weight:500;">or paste an image URL</span>
+      <div style="flex:1;height:1px;background:#E7E7EC;"></div>
+    </div>
+    <div style="display:flex;gap:9px;max-width:520px;margin:14px auto 0;">
+      <input type="url" placeholder="https://example.com/photo.jpg" aria-label="Image URL" style="flex:1;border:1px solid #E1E1E8;border-radius:10px;padding:11px 14px;font-size:14px;color:#17171C;background:#fff;outline:none;" style-focus="border-color:var(--acc,#5A54E8);box-shadow:0 0 0 3px var(--acc-soft,#EFEEFC);">
+      <button onclick="{{ goQueue }}" style="background:#17171C;color:#fff;border:none;border-radius:10px;padding:11px 20px;font-weight:600;font-size:14px;cursor:pointer;white-space:nowrap;" style-hover="background:#2b2b33;">Add</button>
+    </div>
+    </sc-if>
+    </sc-if>
+
+    <!-- ---------- SETTINGS PANEL (queue / converting / completed / error) ---------- -->
+    <sc-if value="{{ hasFiles }}">
+    <div style="animation:fadeUp .3s ease;">
+
+      <div style="background:#fff;border:1px solid #E9E9EE;border-radius:16px;padding:20px 22px;margin:6px 0 16px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;">
+          <div style="display:flex;align-items:center;gap:9px;">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#63636E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-1.8-.3 1.6 1.6 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.6 1.6 0 0 0-1-1.5 1.6 1.6 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.6 1.6 0 0 0 .3-1.8 1.6 1.6 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.6 1.6 0 0 0 1.5-1 1.6 1.6 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.6 1.6 0 0 0 1.8.3H9a1.6 1.6 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.6 1.6 0 0 0 1 1.5 1.6 1.6 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.6 1.6 0 0 0-.3 1.8V9a1.6 1.6 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.6 1.6 0 0 0-1.5 1z"></path></svg>
+            <span style="font-weight:600;font-size:15px;">Conversion settings</span>
+          </div>
+          <span style="font-size:12px;font-weight:600;color:var(--acc-ink,#4A44D6);background:var(--acc-soft,#EFEEFC);border-radius:6px;padding:3px 9px;">Applies to all files</span>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:22px 36px;">
+          <!-- left column -->
+          <div>
+            <label style="display:block;font-size:12.5px;font-weight:600;color:#63636E;margin-bottom:7px;">Output format</label>
+            <div style="position:relative;">
+              <select value="{{ outputFormat }}" onchange="{{ onGlobalFormat }}" aria-label="Output format for all files" style="width:100%;appearance:none;-webkit-appearance:none;background:#F4F4F6;border:1px solid #E1E1E8;border-radius:10px;padding:11px 34px 11px 14px;font-size:14px;font-weight:600;color:#17171C;cursor:pointer;">
+                <sc-for list="{{ formatOptions }}" as="opt" hint-placeholder-count="10"><option value="{{ opt }}">{{ opt }}</option></sc-for>
+              </select>
+              <span style="position:absolute;right:12px;top:50%;transform:translateY(-50%);pointer-events:none;color:#9A9AA4;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"></path></svg></span>
+            </div>
+
+            <div style="display:flex;align-items:center;justify-content:space-between;margin:20px 0 7px;">
+              <label style="font-size:12.5px;font-weight:600;color:#63636E;">Quality / compression</label>
+              <span style="font-size:13px;font-weight:700;color:var(--acc-ink,#4A44D6);">{{ quality }}</span>
+            </div>
+            <input type="range" min="1" max="100" value="{{ quality }}" onchange="{{ setQuality }}" aria-label="Quality" style="width:100%;accent-color:var(--acc,#5A54E8);height:4px;cursor:pointer;">
+            <div style="display:flex;justify-content:space-between;font-size:11px;color:#9A9AA4;margin-top:6px;">
+              <span>Smaller file</span><span>Best quality</span>
+            </div>
+          </div>
+
+          <!-- right column -->
+          <div>
+            <label style="display:block;font-size:12.5px;font-weight:600;color:#63636E;margin-bottom:7px;">Resize</label>
+            <div style="display:flex;gap:9px;">
+              <div style="position:relative;flex:1;">
+                <select value="{{ resizeMode }}" onchange="{{ setResize }}" aria-label="Resize mode" style="width:100%;appearance:none;-webkit-appearance:none;background:#F4F4F6;border:1px solid #E1E1E8;border-radius:10px;padding:11px 34px 11px 14px;font-size:14px;font-weight:600;color:#17171C;cursor:pointer;">
+                  <option value="none">No resize</option>
+                  <option value="px">Custom (px)</option>
+                  <option value="pct">Percentage</option>
+                  <option value="preset">Preset sizes</option>
+                </select>
+                <span style="position:absolute;right:12px;top:50%;transform:translateY(-50%);pointer-events:none;color:#9A9AA4;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"></path></svg></span>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;margin-top:9px;">
+              <input type="number" value="{{ width }}" onchange="{{ setW }}" aria-label="Width" style="width:100%;border:1px solid #E1E1E8;border-radius:10px;padding:10px 12px;font-size:14px;color:#17171C;background:#fff;outline:none;" style-focus="border-color:var(--acc,#5A54E8);">
+              <span style="color:#9A9AA4;font-size:13px;">×</span>
+              <input type="number" value="{{ height }}" onchange="{{ setH }}" aria-label="Height" style="width:100%;border:1px solid #E1E1E8;border-radius:10px;padding:10px 12px;font-size:14px;color:#17171C;background:#fff;outline:none;" style-focus="border-color:var(--acc,#5A54E8);">
+              <span style="color:#9A9AA4;font-size:12px;font-weight:600;">px</span>
+            </div>
+
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-top:16px;">
+              <span style="font-size:13.5px;font-weight:500;">Maintain aspect ratio</span>
+              <button onclick="{{ toggleAspect }}" role="switch" aria-label="Maintain aspect ratio" style="{{ aspectSw }}"><span style="{{ aspectKnob }}"></span></button>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px;">
+              <span style="font-size:13.5px;font-weight:500;">Strip metadata (EXIF)</span>
+              <button onclick="{{ toggleMeta }}" role="switch" aria-label="Strip metadata" style="{{ metaSw }}"><span style="{{ metaKnob }}"></span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Toolbar -->
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px;">
+        <div style="display:flex;align-items:center;gap:14px;min-width:0;">
+          <span style="font-family:'Bricolage Grotesque';font-weight:600;font-size:16px;">{{ fileCount }} files</span>
+          <sc-if value="{{ isConverting }}">
+            <div style="display:flex;align-items:center;gap:9px;">
+              <div style="width:130px;height:6px;background:#EDEDF1;border-radius:6px;overflow:hidden;"><div style="height:100%;width:{{ overallW }};background:var(--acc,#5A54E8);border-radius:6px;transition:width .1s linear;"></div></div>
+              <span style="font-size:12.5px;font-weight:600;color:#63636E;">{{ overall }}% overall</span>
+            </div>
+          </sc-if>
+          <sc-if value="{{ isCompleted }}">
+            <span style="display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:#12864C;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"></path></svg>All conversions complete</span>
+          </sc-if>
+          <sc-if value="{{ isError }}">
+            <span style="display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:#D23B36;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v5"></path><path d="M10.3 3.9 2.6 17.6A1.6 1.6 0 0 0 4 20h16a1.6 1.6 0 0 0 1.4-2.4L13.7 3.9a1.6 1.6 0 0 0-3.4 0Z"></path></svg>3 files need attention</span>
+          </sc-if>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <!-- list/grid toggle -->
+          <div style="display:flex;background:#EDEDF1;border-radius:10px;padding:3px;">
+            <button onclick="{{ toggleList }}" data-m="list" aria-label="List view" style="{{ listBtnStyle }}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+            <button onclick="{{ toggleList }}" data-m="grid" aria-label="Grid view" style="{{ gridBtnStyle }}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="7" height="7" rx="1.5"></rect><rect x="13" y="4" width="7" height="7" rx="1.5"></rect><rect x="4" y="13" width="7" height="7" rx="1.5"></rect><rect x="13" y="13" width="7" height="7" rx="1.5"></rect></svg></button>
+          </div>
+          <!-- bulk actions -->
+          <sc-if value="{{ isQueue }}">
+            <button onclick="{{ onRemoveAll }}" style="background:#fff;border:1px solid #E1E1E8;border-radius:10px;padding:10px 15px;font-size:13.5px;font-weight:600;color:#63636E;cursor:pointer;" style-hover="border-color:#C9C9D2;color:#17171C;">Remove all</button>
+            <button onclick="{{ convertAll }}" style="background:var(--acc,#5A54E8);color:#fff;border:none;border-radius:10px;padding:10px 18px;font-size:13.5px;font-weight:600;cursor:pointer;box-shadow:0 3px 10px rgba(90,84,232,.22);" style-hover="background:var(--acc-ink,#4A44D6);">Convert all</button>
+          </sc-if>
+          <sc-if value="{{ isConverting }}">
+            <button onclick="{{ cancel }}" style="background:#fff;border:1px solid #F3C9C9;border-radius:10px;padding:10px 18px;font-size:13.5px;font-weight:600;color:#D23B36;cursor:pointer;" style-hover="background:#FDECEC;">Cancel</button>
+          </sc-if>
+          <sc-if value="{{ isCompleted }}">
+            <button onclick="{{ onRemoveAll }}" style="background:#fff;border:1px solid #E1E1E8;border-radius:10px;padding:10px 15px;font-size:13.5px;font-weight:600;color:#63636E;cursor:pointer;" style-hover="border-color:#C9C9D2;color:#17171C;">Clear</button>
+            <button onclick="{{ onDownloadAll }}" style="display:flex;align-items:center;gap:7px;background:#12864C;color:#fff;border:none;border-radius:10px;padding:10px 18px;font-size:13.5px;font-weight:600;cursor:pointer;box-shadow:0 3px 10px rgba(18,134,76,.22);" style-hover="background:#0E7040;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11"></path><path d="M7 11l5 5 5-5"></path><path d="M5 20h14"></path></svg>Download all (ZIP)</button>
+          </sc-if>
+          <sc-if value="{{ isError }}">
+            <button onclick="{{ onRemoveAll }}" style="background:#fff;border:1px solid #E1E1E8;border-radius:10px;padding:10px 15px;font-size:13.5px;font-weight:600;color:#63636E;cursor:pointer;" style-hover="border-color:#C9C9D2;color:#17171C;">Remove all</button>
+            <button onclick="{{ convertAll }}" style="background:var(--acc,#5A54E8);color:#fff;border:none;border-radius:10px;padding:10px 18px;font-size:13.5px;font-weight:600;cursor:pointer;" style-hover="background:var(--acc-ink,#4A44D6);">Convert 1 ready</button>
+          </sc-if>
+        </div>
+      </div>
+
+      <!-- File list -->
+      <div style="{{ listStyle }}">
+        <sc-for list="{{ files }}" as="f" hint-placeholder-count="4">
+          <div style="display:flex;align-items:center;gap:14px;background:#fff;border:1px solid #E9E9EE;border-radius:14px;padding:12px 14px;">
+            <!-- thumbnail -->
+            <div style="position:relative;width:52px;height:52px;border-radius:10px;flex:none;background:{{ f.grad }};">
+              <span style="position:absolute;left:4px;bottom:4px;background:rgba(0,0,0,.5);color:#fff;font-size:9px;font-weight:700;letter-spacing:.03em;padding:1px 5px;border-radius:5px;">{{ f.ext }}</span>
+              <sc-if value="{{ f.isDone }}"><span style="position:absolute;right:-5px;top:-5px;width:20px;height:20px;border-radius:50%;background:#12864C;color:#fff;display:flex;align-items:center;justify-content:center;border:2px solid #fff;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"></path></svg></span></sc-if>
+              <sc-if value="{{ f.isErr }}"><span style="position:absolute;inset:0;background:rgba(210,59,54,.16);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#D23B36;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v5"></path><path d="M10.3 3.9 2.6 17.6A1.6 1.6 0 0 0 4 20h16a1.6 1.6 0 0 0 1.4-2.4L13.7 3.9a1.6 1.6 0 0 0-3.4 0Z"></path></svg></span></sc-if>
+            </div>
+            <!-- info -->
+            <div style="flex:1;min-width:0;">
+              <div style="font-weight:600;font-size:14.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">{{ f.name }}</div>
+              <sc-if value="{{ f.isReady }}"><div style="font-size:12.5px;color:#63636E;margin-top:3px;">{{ f.sub }}</div></sc-if>
+              <sc-if value="{{ f.isDone }}"><div style="font-size:12.5px;color:#63636E;margin-top:3px;">{{ f.sub }} · <span style="color:#12864C;font-weight:700;">{{ f.save }}</span></div></sc-if>
+              <sc-if value="{{ f.isErr }}"><div style="font-size:12.5px;color:#D23B36;margin-top:3px;font-weight:500;">{{ f.err }}</div></sc-if>
+              <sc-if value="{{ f.isConverting }}">
+                <div style="margin-top:8px;display:flex;align-items:center;gap:10px;">
+                  <div style="flex:1;height:6px;background:#EDEDF1;border-radius:6px;overflow:hidden;"><div style="height:100%;width:{{ f.barW }};background:var(--acc,#5A54E8);border-radius:6px;transition:width .1s linear;"></div></div>
+                  <span style="font-size:12px;color:#63636E;min-width:34px;text-align:right;font-weight:600;">{{ f.prog }}%</span>
+                </div>
+              </sc-if>
+            </div>
+            <!-- actions -->
+            <div style="flex:none;display:flex;align-items:center;gap:8px;">
+              <sc-if value="{{ f.isReady }}">
+                <div style="position:relative;">
+                  <select data-id="{{ f.id }}" value="{{ f.target }}" onchange="{{ onFileFormat }}" aria-label="Target format" style="appearance:none;-webkit-appearance:none;background:#F4F4F6;border:1px solid #E1E1E8;border-radius:9px;padding:8px 30px 8px 12px;font-size:13px;font-weight:600;color:#17171C;cursor:pointer;">
+                    <sc-for list="{{ formatOptions }}" as="opt" hint-placeholder-count="10"><option value="{{ opt }}">{{ opt }}</option></sc-for>
+                  </select>
+                  <span style="position:absolute;right:9px;top:50%;transform:translateY(-50%);pointer-events:none;color:#9A9AA4;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"></path></svg></span>
+                </div>
+                <button onclick="{{ onRemove }}" aria-label="Remove file" style="width:34px;height:34px;border-radius:9px;border:1px solid #E9E9EE;background:#fff;color:#9A9AA4;cursor:pointer;display:flex;align-items:center;justify-content:center;" style-hover="background:#FDECEC;color:#D23B36;border-color:#F3C9C9;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+              </sc-if>
+              <sc-if value="{{ f.isConverting }}">
+                <button onclick="{{ cancel }}" aria-label="Cancel" style="width:34px;height:34px;border-radius:9px;border:1px solid #E9E9EE;background:#fff;color:#9A9AA4;cursor:pointer;display:flex;align-items:center;justify-content:center;" style-hover="background:#FDECEC;color:#D23B36;border-color:#F3C9C9;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+              </sc-if>
+              <sc-if value="{{ f.isDone }}">
+                <button onclick="{{ onDownload }}" style="display:flex;align-items:center;gap:7px;padding:9px 15px;border-radius:9px;border:none;background:#12864C;color:#fff;font-weight:600;font-size:13px;cursor:pointer;" style-hover="background:#0E7040;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11"></path><path d="M7 11l5 5 5-5"></path><path d="M5 20h14"></path></svg>Download</button>
+              </sc-if>
+              <sc-if value="{{ f.isErr }}">
+                <button onclick="{{ onRetry }}" style="display:flex;align-items:center;gap:6px;padding:8px 13px;border-radius:9px;border:1px solid #E1E1E8;background:#fff;color:#17171C;font-weight:600;font-size:13px;cursor:pointer;" style-hover="border-color:#C9C9D2;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"></path><path d="M21 4v5h-5"></path></svg>Retry</button>
+                <button onclick="{{ onRemove }}" aria-label="Remove file" style="width:34px;height:34px;border-radius:9px;border:1px solid #E9E9EE;background:#fff;color:#9A9AA4;cursor:pointer;display:flex;align-items:center;justify-content:center;" style-hover="background:#FDECEC;color:#D23B36;border-color:#F3C9C9;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+              </sc-if>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+    </sc-if>
+
+    <!-- Footer -->
+    <footer id="formats" style="border-top:1px solid #E9E9EE;margin-top:48px;padding:32px 0 44px;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:28px;">
+      <div>
+        <div style="display:flex;align-items:center;gap:9px;margin-bottom:12px;">
+          <div style="width:26px;height:26px;border-radius:7px;background:var(--acc,#5A54E8);display:flex;align-items:center;justify-content:center;color:#fff;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h13l-3-3"></path><path d="M20 16H7l3 3"></path></svg></div>
+          <span style="font-family:'Bricolage Grotesque';font-weight:700;font-size:16px;">Reformat</span>
+        </div>
+        <p style="color:#9A9AA4;font-size:13px;line-height:1.5;margin:0;max-width:240px;">Convert and compress images entirely in your browser. Nothing is uploaded to a server.</p>
+      </div>
+      <div>
+        <div style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#9A9AA4;margin-bottom:12px;">Supported formats</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;">
+          <sc-for list="{{ formatOptions }}" as="fmt" hint-placeholder-count="10"><span style="font-size:12px;font-weight:600;color:#63636E;background:#F1F1F4;border-radius:6px;padding:3px 8px;">{{ fmt }}</span></sc-for>
+        </div>
+      </div>
+      <div id="faq">
+        <div style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#9A9AA4;margin-bottom:12px;">Resources</div>
+        <div style="display:flex;flex-direction:column;gap:9px;">
+          <a href="#faq" style="font-size:13.5px;">FAQ</a>
+          <a href="#" style="font-size:13.5px;">Batch conversion guide</a>
+          <a href="#" style="font-size:13.5px;">Privacy &amp; security</a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+  </sc-if>
+
+  <!-- ============ MOBILE FRAME ============ -->
+  <sc-if value="{{ isMobile }}">
+  <div style="display:flex;justify-content:center;padding:34px 16px 60px;">
+    <div style="width:392px;height:812px;border:11px solid #17171C;border-radius:48px;background:#F7F7F8;overflow:hidden;position:relative;box-shadow:0 30px 70px rgba(0,0,0,.32);">
+      <!-- status bar -->
+      <div style="height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 26px;font-size:13px;font-weight:700;">
+        <span>9:41</span>
+        <div style="width:120px;height:26px;background:#17171C;border-radius:0 0 16px 16px;position:absolute;left:50%;top:0;transform:translateX(-50%);"></div>
+        <span style="display:flex;gap:5px;align-items:center;"><svg width="17" height="12" viewBox="0 0 24 16" fill="#17171C"><rect x="1" y="4" width="4" height="10" rx="1"></rect><rect x="7" y="2" width="4" height="12" rx="1"></rect><rect x="13" y="0" width="4" height="14" rx="1" opacity=".35"></rect></svg></span>
+      </div>
+      <!-- app header -->
+      <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 18px 12px;">
+        <div style="display:flex;align-items:center;gap:9px;">
+          <div style="width:30px;height:30px;border-radius:8px;background:var(--acc,#5A54E8);display:flex;align-items:center;justify-content:center;color:#fff;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h13l-3-3"></path><path d="M20 16H7l3 3"></path></svg></div>
+          <span style="font-family:'Bricolage Grotesque';font-weight:700;font-size:18px;">Reformat</span>
+        </div>
+        <button style="width:34px;height:34px;border-radius:9px;border:1px solid #E1E1E8;background:#fff;display:flex;align-items:center;justify-content:center;color:#63636E;cursor:pointer;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+      </div>
+      <!-- queue (stacked) -->
+      <div style="padding:0 18px;">
+        <div style="font-family:'Bricolage Grotesque';font-weight:600;font-size:15px;margin-bottom:10px;">3 files</div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div style="display:flex;align-items:center;gap:11px;background:#fff;border:1px solid #E9E9EE;border-radius:13px;padding:10px 12px;">
+            <div style="position:relative;width:44px;height:44px;border-radius:9px;flex:none;background:linear-gradient(135deg,#F6B26B,#E8638B);"><span style="position:absolute;left:3px;bottom:3px;background:rgba(0,0,0,.5);color:#fff;font-size:8px;font-weight:700;padding:1px 4px;border-radius:4px;">JPG</span></div>
+            <div style="flex:1;min-width:0;"><div style="font-weight:600;font-size:13.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">mountain-sunrise.jpg</div><div style="font-size:11.5px;color:#63636E;margin-top:2px;">JPG · 4.2 MB → WEBP</div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:11px;background:#fff;border:1px solid #E9E9EE;border-radius:13px;padding:10px 12px;">
+            <div style="position:relative;width:44px;height:44px;border-radius:9px;flex:none;background:linear-gradient(135deg,#6CB6F7,#3B5BDB);"><span style="position:absolute;left:3px;bottom:3px;background:rgba(0,0,0,.5);color:#fff;font-size:8px;font-weight:700;padding:1px 4px;border-radius:4px;">PNG</span></div>
+            <div style="flex:1;min-width:0;"><div style="font-weight:600;font-size:13.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">team-photo.png</div><div style="font-size:11.5px;color:#63636E;margin-top:2px;">PNG · 8.1 MB → WEBP</div></div>
+          </div>
+          <div style="display:flex;align-items:center;gap:11px;background:#fff;border:1px solid #E9E9EE;border-radius:13px;padding:10px 12px;">
+            <div style="position:relative;width:44px;height:44px;border-radius:9px;flex:none;background:linear-gradient(135deg,#D2BCFA,#6B46C1);"><span style="position:absolute;left:3px;bottom:3px;background:rgba(0,0,0,.5);color:#fff;font-size:8px;font-weight:700;padding:1px 4px;border-radius:4px;">HEIC</span></div>
+            <div style="flex:1;min-width:0;"><div style="font-weight:600;font-size:13.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">passport-scan.heic</div><div style="font-size:11.5px;color:#63636E;margin-top:2px;">HEIC · 2.7 MB → JPG</div></div>
+          </div>
+        </div>
+      </div>
+      <!-- bottom sheet -->
+      <div style="position:absolute;left:0;right:0;bottom:0;background:#fff;border-top:1px solid #E9E9EE;border-radius:22px 22px 0 0;padding:12px 18px 26px;box-shadow:0 -8px 30px rgba(0,0,0,.08);">
+        <div style="width:38px;height:4px;border-radius:4px;background:#DCDCE3;margin:0 auto 14px;"></div>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;"><span style="font-weight:600;font-size:14px;">Conversion settings</span><span style="font-size:11px;font-weight:600;color:var(--acc-ink,#4A44D6);background:var(--acc-soft,#EFEEFC);border-radius:6px;padding:2px 8px;">All files</span></div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;">
+          <span style="font-size:12px;font-weight:600;background:#F1F1F4;border:1px solid #E7E7EC;border-radius:8px;padding:6px 11px;">Format · WEBP</span>
+          <span style="font-size:12px;font-weight:600;background:#F1F1F4;border:1px solid #E7E7EC;border-radius:8px;padding:6px 11px;">Quality · 82</span>
+          <span style="font-size:12px;font-weight:600;background:#F1F1F4;border:1px solid #E7E7EC;border-radius:8px;padding:6px 11px;">No resize</span>
+        </div>
+        <button style="width:100%;background:var(--acc,#5A54E8);color:#fff;border:none;border-radius:13px;padding:15px;font-weight:600;font-size:15.5px;cursor:pointer;box-shadow:0 4px 14px rgba(90,84,232,.28);">Convert 3 files</button>
+      </div>
+    </div>
+  </div>
+  </sc-if>
+
+  <!-- Toast -->
+  <sc-if value="{{ toast }}">
+    <div style="position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:#17171C;color:#fff;padding:12px 18px;border-radius:12px;font-size:14px;font-weight:500;box-shadow:0 12px 34px rgba(0,0,0,.28);z-index:60;animation:toastIn .25s ease;display:flex;gap:9px;align-items:center;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5FD08A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"></path></svg>
+      {{ toast }}
+    </div>
+  </sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{
+  &quot;$preview&quot;: {&quot;width&quot;: 1180, &quot;height&quot;: 920},
+  &quot;accent&quot;: {&quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#5A54E8&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Theme&quot;, &quot;options&quot;: [&quot;#5A54E8&quot;, &quot;#0E8F6E&quot;, &quot;#E8638B&quot;, &quot;#1F6FEB&quot;]},
+  &quot;showPasteUrl&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Empty state&quot;},
+  &quot;maxSizeMb&quot;: {&quot;editor&quot;: &quot;int&quot;, &quot;default&quot;: 25, &quot;tsType&quot;: &quot;number&quot;, &quot;min&quot;: 1, &quot;max&quot;: 200, &quot;unit&quot;: &quot;MB&quot;, &quot;section&quot;: &quot;Limits&quot;}
+}">
+class Component extends DCLogic {
+  state = {
+    view:'empty', listMode:'list', outputFormat:'WEBP', quality:82,
+    resizeMode:'none', width:1600, height:900, keepAspect:true, stripMeta:true,
+    dragOver:false, anim:0, animating:false, toast:'',
+    targets:{1:'WEBP',2:'WEBP',3:'PNG',4:'JPG'},
+  };
+
+  BASE=[
+    {id:1,name:'mountain-sunrise.jpg',ext:'JPG',size:'4.2 MB',grad:'linear-gradient(135deg,#F6B26B,#E8638B)',done:'0.9 MB',save:'\u221279%'},
+    {id:2,name:'team-photo.png',ext:'PNG',size:'8.1 MB',grad:'linear-gradient(135deg,#6CB6F7,#3B5BDB)',done:'1.4 MB',save:'\u221283%'},
+    {id:3,name:'brand-logo.svg',ext:'SVG',size:'42 KB',grad:'linear-gradient(135deg,#8FE3B0,#2F855A)',done:'18 KB',save:'\u221257%'},
+    {id:4,name:'passport-scan.heic',ext:'HEIC',size:'2.7 MB',grad:'linear-gradient(135deg,#D2BCFA,#6B46C1)',done:'1.1 MB',save:'\u221259%'},
+  ];
+
+  ERR=[
+    {id:1,name:'mountain-sunrise.jpg',ext:'JPG',size:'4.2 MB',grad:'linear-gradient(135deg,#F6B26B,#E8638B)',status:'ready',target:'WEBP'},
+    {id:8,name:'raw-capture.arw',ext:'ARW',size:'48.6 MB',grad:'linear-gradient(135deg,#B8B8C2,#6E6E7A)',status:'error',err:'Unsupported format \u2014 RAW (.arw) can\u2019t be converted'},
+    {id:9,name:'hero-banner.tiff',ext:'TIFF',size:'32.4 MB',grad:'linear-gradient(135deg,#F6C56B,#D98A2B)',status:'error',err:'File exceeds the maximum size limit'},
+    {id:10,name:'broken-image.png',ext:'PNG',size:'1.2 MB',grad:'linear-gradient(135deg,#F2A0A0,#C0504D)',status:'error',err:'File appears corrupted or unreadable'},
+  ];
+
+  PAL={
+    '#5A54E8':{ink:'#4A44D6',soft:'#EFEEFC'},
+    '#0E8F6E':{ink:'#0B7458',soft:'#E4F6EF'},
+    '#E8638B':{ink:'#D24875',soft:'#FCEBF1'},
+    '#1F6FEB':{ink:'#1858C7',soft:'#E8F0FE'},
+  };
+
+  _t=null; _tt=null;
+
+  stopAnim=()=>{ if(this._t){clearInterval(this._t); this._t=null;} };
+
+  convertAll=()=>{
+    this.stopAnim();
+    this.setState({view:'converting', anim:0, animating:true});
+    this._t=setInterval(()=>{
+      this.setState(st=>{
+        const na=st.anim+4;
+        if(na>=120){ if(this._t){clearInterval(this._t); this._t=null;} return {anim:120, view:'completed', animating:false, toast:'All files converted'}; }
+        return {anim:na};
+      });
+    },40);
+  };
+
+  showToast=(m)=>{ this.setState({toast:m}); clearTimeout(this._tt); this._tt=setTimeout(()=>this.setState({toast:''}),2400); };
+
+  componentWillUnmount(){ this.stopAnim(); clearTimeout(this._tt); }
+
+  renderVals(){
+    const s=this.state;
+    const acc=this.props.accent||'#5A54E8';
+    const pal=this.PAL[acc]||{ink:'#4A44D6',soft:'#EFEEFC'};
+    const maxSize=this.props.maxSizeMb??25;
+    const showPaste=this.props.showPasteUrl??true;
+    const fmts=['JPG','PNG','WEBP','GIF','BMP','TIFF','SVG','HEIC','AVIF','PDF'];
+    const view=s.view;
+
+    const base=this.BASE.map(f=>({...f, target:s.targets[f.id]}));
+    let files=[];
+    if(view==='queue') files=base.map(f=>({...f, isReady:true, sub:f.ext+' \u00b7 '+f.size}));
+    else if(view==='converting') files=base.map((f,i)=>{ const prog=Math.max(0,Math.min(100,Math.round(s.anim*1.35 - i*18))); return {...f, isConverting:true, prog, barW:prog+'%'}; });
+    else if(view==='completed') files=base.map(f=>({...f, isDone:true, sub:f.size+' \u2192 '+f.done, save:f.save}));
+    else if(view==='error') files=this.ERR.map(f=>({...f, target:f.target||'WEBP', isReady:f.status!=='error', isErr:f.status==='error', sub:f.ext+' \u00b7 '+f.size, err:f.err}));
+
+    const progs=files.map(f=>f.prog||0);
+    const overall = view==='converting' ? Math.round(progs.reduce((a,b)=>a+b,0)/(progs.length||1)) : (view==='completed'?100:0);
+
+    const seg=(on)=>`display:flex;align-items:center;justify-content:center;width:36px;height:32px;border-radius:8px;border:none;cursor:pointer;background:${on?'#fff':'transparent'};color:${on?'var(--acc-ink,#4A44D6)':'#9A9AA4'};box-shadow:${on?'0 1px 2px rgba(0,0,0,.08)':'none'};`;
+    const sw=(on)=>`width:42px;height:24px;border-radius:999px;border:none;padding:3px;cursor:pointer;background:${on?'var(--acc,#5A54E8)':'#D3D3DB'};transition:background .18s;display:flex;`;
+    const knob=(on)=>`width:18px;height:18px;border-radius:50%;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.3);transition:transform .18s;transform:translateX(${on?'18px':'0'});`;
+
+    const tabs=[['empty','Empty'],['queue','Queue'],['converting','Converting'],['completed','Completed'],['error','Errors'],['mobile','Mobile']];
+    const stateTabs=tabs.map(([key,label])=>({key,label,active:view===key,
+      style:`padding:6px 14px;border-radius:999px;font-size:12.5px;font-weight:600;white-space:nowrap;border:1px solid ${view===key?'transparent':'rgba(255,255,255,.16)'};background:${view===key?'#fff':'transparent'};color:${view===key?'#111116':'rgba(255,255,255,.7)'};cursor:pointer;transition:.15s;`}));
+
+    return {
+      rootStyle:`--acc:${acc};--acc-ink:${pal.ink};--acc-soft:${pal.soft};min-height:100vh;`,
+      stateTabs, formatOptions:fmts, files, fileCount:files.length,
+      overall, overallW:overall+'%', maxSize, showPaste,
+      isDesktop: view!=='mobile', isMobile: view==='mobile',
+      isEmpty: view==='empty', hasFiles: view!=='empty'&&view!=='mobile',
+      isQueue:view==='queue', isConverting:view==='converting', isCompleted:view==='completed', isError:view==='error',
+      quality:s.quality, width:s.width, height:s.height, outputFormat:s.outputFormat, resizeMode:s.resizeMode,
+      listStyle: s.listMode==='grid' ? 'display:grid;grid-template-columns:1fr 1fr;gap:12px;' : 'display:flex;flex-direction:column;gap:10px;',
+      listBtnStyle:seg(s.listMode==='list'), gridBtnStyle:seg(s.listMode==='grid'),
+      aspectSw:sw(s.keepAspect), aspectKnob:knob(s.keepAspect),
+      metaSw:sw(s.stripMeta), metaKnob:knob(s.stripMeta),
+      dropStyle:`border:2px dashed ${s.dragOver?'var(--acc,#5A54E8)':'#D3D3DB'};background:${s.dragOver?'var(--acc-soft,#EFEEFC)':'#FFFFFF'};transition:.15s;`,
+      toast:s.toast,
+
+      setView:(e)=>{ const v=e.currentTarget.dataset.v; this.stopAnim(); if(v==='converting') this.setState({view:'converting', anim:62, animating:false}); else this.setState({view:v}); },
+      goQueue:()=>{ this.stopAnim(); this.setState({view:'queue', dragOver:false}); },
+      onDragOver:(e)=>{ e.preventDefault(); if(!this.state.dragOver) this.setState({dragOver:true}); },
+      onDragLeave:(e)=>{ e.preventDefault(); this.setState({dragOver:false}); },
+      onDrop:(e)=>{ e.preventDefault(); this.setState({view:'queue', dragOver:false}); },
+      convertAll:this.convertAll,
+      cancel:()=>{ this.stopAnim(); this.setState({view:'queue', animating:false}); this.showToast('Conversion cancelled'); },
+      toggleList:(e)=>this.setState({listMode:e.currentTarget.dataset.m}),
+      onGlobalFormat:(e)=>{ const v=e.target.value; const t={}; this.BASE.forEach(f=>t[f.id]=v); this.setState({outputFormat:v, targets:{...this.state.targets,...t}}); this.showToast('Output set to '+v+' for all files'); },
+      onFileFormat:(e)=>{ const id=+e.target.dataset.id; this.setState({targets:{...this.state.targets,[id]:e.target.value}}); },
+      setQuality:(e)=>this.setState({quality:+e.target.value}),
+      setW:(e)=>this.setState({width:+e.target.value}),
+      setH:(e)=>this.setState({height:+e.target.value}),
+      setResize:(e)=>this.setState({resizeMode:e.target.value}),
+      toggleAspect:()=>this.setState(st=>({keepAspect:!st.keepAspect})),
+      toggleMeta:()=>this.setState(st=>({stripMeta:!st.stripMeta})),
+      onDownload:()=>this.showToast('Downloading file\u2026'),
+      onDownloadAll:()=>this.showToast('Preparing ZIP\u2026'),
+      onRemove:()=>this.showToast('File removed'),
+      onRemoveAll:()=>this.showToast('Cleared all files'),
+      onRetry:()=>this.showToast('Retrying conversion\u2026'),
+    };
+  }
+}
+</script>
+
+
+</body></html>

@@ -1,0 +1,194 @@
+---
+const formats = ["JPG", "PNG", "WEBP", "GIF", "BMP", "TIFF", "SVG", "HEIC", "AVIF", "PDF"];
+const maxSize = 25;
+---
+
+<section id="emptyState">
+  <div class="hero">
+    <h1 class="display">Convert images to any format</h1>
+    <p>
+      Drag, drop, and convert between JPG, PNG, WEBP, AVIF, PDF and more —
+      right in your browser.
+    </p>
+  </div>
+
+  <div id="dropzone" class="dropzone" role="button" tabindex="0" aria-label="Drop image files here or activate to choose files">
+    <div class="dz-icon">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--acc)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 16V4"></path>
+        <path d="M7 9l5-5 5 5"></path>
+        <path d="M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"></path>
+      </svg>
+    </div>
+    <div class="dz-title">Drag &amp; drop images here</div>
+    <div class="dz-or">or</div>
+    <button id="chooseBtn" class="btn-primary">Choose files</button>
+    <div class="dz-formats">
+      {formats.map((fmt) => <span class="fmt-chip">{fmt}</span>)}
+    </div>
+    <div class="dz-note">
+      Up to {maxSize} MB per file · up to 50 files · everything stays on your device
+    </div>
+  </div>
+
+  <div class="paste-sep">
+    <div class="line"></div>
+    <span>or paste an image URL</span>
+    <div class="line"></div>
+  </div>
+  <div class="paste-row">
+    <input id="urlInput" type="url" placeholder="https://example.com/photo.jpg" aria-label="Image URL" />
+    <button id="urlAddBtn" class="btn-dark">Add</button>
+  </div>
+</section>
+
+<input id="fileInput" type="file" accept="image/*" multiple class="hidden" aria-hidden="true" />
+
+<style>
+  .hero {
+    text-align: center;
+    padding: 26px 0 24px;
+  }
+  .hero h1 {
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    margin: 0 0 10px;
+    line-height: 1.05;
+  }
+  .hero p {
+    color: var(--muted);
+    font-size: 16.5px;
+    margin: 0 auto;
+    max-width: 520px;
+  }
+  .dropzone {
+    border: 2px dashed var(--line-2);
+    background: #fff;
+    border-radius: 20px;
+    padding: 52px 32px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .dropzone:hover,
+  .dropzone.drag {
+    border-color: var(--acc);
+    background: #fbfbff;
+  }
+  .dz-icon {
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    background: var(--acc-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 18px;
+  }
+  .dz-title {
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  .dz-or {
+    color: var(--faint);
+    font-size: 14px;
+    margin-bottom: 18px;
+  }
+  .btn-primary {
+    background: var(--acc);
+    color: #fff;
+    border: none;
+    border-radius: 11px;
+    padding: 12px 26px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(90, 84, 232, 0.24);
+  }
+  .btn-primary:hover {
+    background: var(--acc-ink);
+  }
+  .dz-formats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: center;
+    max-width: 520px;
+    margin: 26px auto 0;
+  }
+  .fmt-chip {
+    font-size: 11.5px;
+    font-weight: 600;
+    color: var(--muted);
+    background: #f1f1f4;
+    border: 1px solid #e7e7ec;
+    border-radius: 6px;
+    padding: 3px 9px;
+  }
+  .dz-note {
+    color: var(--faint);
+    font-size: 12.5px;
+    margin-top: 16px;
+  }
+  .paste-sep {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 22px auto 0;
+    max-width: 520px;
+  }
+  .paste-sep .line {
+    flex: 1;
+    height: 1px;
+    background: #e7e7ec;
+  }
+  .paste-sep span {
+    color: var(--faint);
+    font-size: 12.5px;
+    font-weight: 500;
+  }
+  .paste-row {
+    display: flex;
+    gap: 9px;
+    max-width: 520px;
+    margin: 14px auto 0;
+  }
+  .paste-row input {
+    flex: 1;
+    border: 1px solid var(--line-2);
+    border-radius: 10px;
+    padding: 11px 14px;
+    font-size: 14px;
+    color: var(--ink);
+    background: #fff;
+    outline: none;
+  }
+  .paste-row input:focus {
+    border-color: var(--acc);
+    box-shadow: 0 0 0 3px var(--acc-soft);
+  }
+  .btn-dark {
+    background: var(--ink);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 11px 20px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .btn-dark:hover {
+    background: #2b2b33;
+  }
+  @media (max-width: 560px) {
+    .hero h1 {
+      font-size: 30px;
+    }
+    .dropzone {
+      padding: 40px 20px;
+    }
+  }
+</style>

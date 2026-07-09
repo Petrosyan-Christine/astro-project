@@ -1,0 +1,185 @@
+---
+---
+
+<div class="toolbar">
+  <div class="tb-left">
+    <span id="fileCount" class="tb-count display">0 files</span>
+
+    <div id="overallWrap" class="overall hidden">
+      <div class="overall-track"><div id="overallBar" class="overall-bar"></div></div>
+      <span id="overallPct" class="overall-pct">0% overall</span>
+    </div>
+
+    <span id="statusDone" class="status ok hidden">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"></path></svg>
+      All conversions complete
+    </span>
+    <span id="statusErr" class="status err hidden">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v5"></path><path d="M10.3 3.9 2.6 17.6A1.6 1.6 0 0 0 4 20h16a1.6 1.6 0 0 0 1.4-2.4L13.7 3.9a1.6 1.6 0 0 0-3.4 0Z"></path></svg>
+      <span id="statusErrText">files need attention</span>
+    </span>
+  </div>
+
+  <div class="tb-right">
+    <div class="view-toggle">
+      <button id="listBtn" class="view-btn active" aria-label="List view">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      </button>
+      <button id="gridBtn" class="view-btn" aria-label="Grid view">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="7" height="7" rx="1.5"></rect><rect x="13" y="4" width="7" height="7" rx="1.5"></rect><rect x="4" y="13" width="7" height="7" rx="1.5"></rect><rect x="13" y="13" width="7" height="7" rx="1.5"></rect></svg>
+      </button>
+    </div>
+
+    <button id="removeAllBtn" class="btn-line">Remove all</button>
+    <button id="cancelBtn" class="btn-cancel hidden">Cancel</button>
+    <button id="convertAllBtn" class="btn-accent hidden">Convert all</button>
+    <button id="downloadAllBtn" class="btn-ok hidden">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11"></path><path d="M7 11l5 5 5-5"></path><path d="M5 20h14"></path></svg>
+      Download all (ZIP)
+    </button>
+  </div>
+</div>
+
+<style>
+  .toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+  }
+  .tb-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 0;
+  }
+  .tb-count {
+    font-weight: 600;
+    font-size: 16px;
+  }
+  .overall {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+  }
+  .overall-track {
+    width: 130px;
+    height: 6px;
+    background: #ededf1;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .overall-bar {
+    height: 100%;
+    width: 0;
+    background: var(--acc);
+    border-radius: 6px;
+    transition: width 0.1s linear;
+  }
+  .overall-pct {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--muted);
+  }
+  .status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .status.ok {
+    color: var(--ok);
+  }
+  .status.err {
+    color: var(--err);
+  }
+  .tb-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .view-toggle {
+    display: flex;
+    background: #ededf1;
+    border-radius: 10px;
+    padding: 3px;
+  }
+  .view-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 30px;
+    border: none;
+    background: transparent;
+    border-radius: 8px;
+    color: var(--muted);
+    cursor: pointer;
+  }
+  .view-btn.active {
+    background: #fff;
+    color: var(--ink);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  }
+  .btn-line {
+    background: #fff;
+    border: 1px solid var(--line-2);
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--muted);
+    cursor: pointer;
+  }
+  .btn-line:hover {
+    border-color: #c9c9d2;
+    color: var(--ink);
+  }
+  .btn-accent {
+    background: var(--acc);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 18px;
+    font-size: 13.5px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(90, 84, 232, 0.22);
+  }
+  .btn-accent:hover {
+    background: var(--acc-ink);
+  }
+  .btn-cancel {
+    background: #fff;
+    border: 1px solid #f3c9c9;
+    border-radius: 10px;
+    padding: 10px 18px;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--err);
+    cursor: pointer;
+  }
+  .btn-cancel:hover {
+    background: #fdecec;
+  }
+  .btn-ok {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    background: var(--ok);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 18px;
+    font-size: 13.5px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(18, 134, 76, 0.22);
+  }
+  .btn-ok:hover {
+    background: #0e7040;
+  }
+</style>

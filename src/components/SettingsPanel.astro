@@ -1,0 +1,262 @@
+---
+// Output formats the browser can actually encode from a <canvas>.
+// AVIF is feature-detected at runtime and disabled if unsupported.
+const outputs = ["WEBP", "PNG", "JPG", "AVIF"];
+---
+
+<div id="settings" class="panel">
+  <div class="panel-head">
+    <div class="panel-title">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="3"></circle>
+        <path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-1.8-.3 1.6 1.6 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.6 1.6 0 0 0-1-1.5 1.6 1.6 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.6 1.6 0 0 0 .3-1.8 1.6 1.6 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.6 1.6 0 0 0 1.5-1 1.6 1.6 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.6 1.6 0 0 0 1.8.3H9a1.6 1.6 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.6 1.6 0 0 0 1 1.5 1.6 1.6 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.6 1.6 0 0 0-.3 1.8V9a1.6 1.6 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.6 1.6 0 0 0-1.5 1z"></path>
+      </svg>
+      <span>Conversion settings</span>
+    </div>
+    <span class="applies-tag">Applies to all files</span>
+  </div>
+
+  <div class="panel-grid">
+    <div>
+      <label for="outputFormat">Output format</label>
+      <div class="select-wrap">
+        <select id="outputFormat" aria-label="Output format for all files">
+          {outputs.map((o) => <option value={o}>{o}</option>)}
+        </select>
+        <span class="chevron">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"></path></svg>
+        </span>
+      </div>
+
+      <div class="quality-head">
+        <label for="quality">Quality / compression</label>
+        <span id="qualityVal" class="quality-val">82</span>
+      </div>
+      <input id="quality" type="range" min="1" max="100" value="82" aria-label="Quality" />
+      <div class="range-legend">
+        <span>Smaller file</span>
+        <span>Best quality</span>
+      </div>
+    </div>
+
+    <div>
+      <label for="resizeMode">Resize</label>
+      <div class="select-wrap">
+        <select id="resizeMode" aria-label="Resize mode">
+          <option value="none">No resize</option>
+          <option value="px">Custom (px)</option>
+          <option value="pct">Percentage</option>
+          <option value="preset">Preset sizes</option>
+        </select>
+        <span class="chevron">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"></path></svg>
+        </span>
+      </div>
+
+      <div id="resizePx" class="resize-fields hidden">
+        <input id="width" type="number" min="1" value="1600" aria-label="Width" />
+        <span class="times">×</span>
+        <input id="height" type="number" min="1" value="900" aria-label="Height" />
+        <span class="unit">px</span>
+      </div>
+
+      <div id="resizePct" class="resize-fields hidden">
+        <input id="pct" type="number" min="1" max="100" value="50" aria-label="Scale percentage" />
+        <span class="unit">%</span>
+      </div>
+
+      <div id="resizePreset" class="resize-fields hidden">
+        <div class="select-wrap" style="flex:1">
+          <select id="preset" aria-label="Preset size">
+            <option value="1920x1080">1920 × 1080 (FHD)</option>
+            <option value="1280x720">1280 × 720 (HD)</option>
+            <option value="1080x1080">1080 × 1080 (Square)</option>
+            <option value="800x800">800 × 800</option>
+            <option value="512x512">512 × 512</option>
+            <option value="256x256">256 × 256</option>
+          </select>
+          <span class="chevron">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"></path></svg>
+          </span>
+        </div>
+      </div>
+
+      <div class="switch-row">
+        <span>Maintain aspect ratio</span>
+        <button id="aspectToggle" class="switch on" role="switch" aria-checked="true" aria-label="Maintain aspect ratio">
+          <span class="knob"></span>
+        </button>
+      </div>
+      <div class="switch-row">
+        <span>Strip metadata (EXIF)</span>
+        <button id="metaToggle" class="switch on" role="switch" aria-checked="true" aria-label="Strip metadata">
+          <span class="knob"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .panel {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 20px 22px;
+    margin: 6px 0 16px;
+  }
+  .panel-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+  }
+  .panel-title {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-weight: 600;
+    font-size: 15px;
+  }
+  .applies-tag {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--acc-ink);
+    background: var(--acc-soft);
+    border-radius: 6px;
+    padding: 3px 9px;
+  }
+  .panel-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px 36px;
+  }
+  label {
+    display: block;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--muted);
+    margin-bottom: 7px;
+  }
+  .select-wrap {
+    position: relative;
+  }
+  select {
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+    background: var(--fill);
+    border: 1px solid var(--line-2);
+    border-radius: 10px;
+    padding: 11px 34px 11px 14px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink);
+    cursor: pointer;
+  }
+  .chevron {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: var(--faint);
+    display: flex;
+  }
+  .quality-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0 7px;
+  }
+  .quality-head label {
+    margin: 0;
+  }
+  .quality-val {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--acc-ink);
+  }
+  input[type="range"] {
+    width: 100%;
+    accent-color: var(--acc);
+    height: 4px;
+    cursor: pointer;
+  }
+  .range-legend {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: var(--faint);
+    margin-top: 6px;
+  }
+  .resize-fields {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 9px;
+  }
+  .resize-fields input[type="number"] {
+    width: 100%;
+    border: 1px solid var(--line-2);
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-size: 14px;
+    color: var(--ink);
+    background: #fff;
+    outline: none;
+  }
+  .resize-fields input[type="number"]:focus {
+    border-color: var(--acc);
+  }
+  .times {
+    color: var(--faint);
+    font-size: 13px;
+  }
+  .unit {
+    color: var(--faint);
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .switch-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 14px;
+    font-size: 13.5px;
+    font-weight: 500;
+  }
+  .switch {
+    position: relative;
+    width: 40px;
+    height: 23px;
+    border-radius: 999px;
+    border: none;
+    background: #d6d6de;
+    cursor: pointer;
+    transition: background 0.16s;
+    flex: none;
+  }
+  .switch.on {
+    background: var(--acc);
+  }
+  .knob {
+    position: absolute;
+    top: 2.5px;
+    left: 2.5px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    transition: transform 0.16s;
+  }
+  .switch.on .knob {
+    transform: translateX(17px);
+  }
+  @media (max-width: 640px) {
+    .panel-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

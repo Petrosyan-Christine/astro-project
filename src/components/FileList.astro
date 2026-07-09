@@ -1,0 +1,238 @@
+---
+---
+
+<div id="fileList" class="file-list list"></div>
+
+<!-- Row template cloned by the client script for each file. -->
+<template id="rowTemplate">
+  <div class="file-row" data-id="">
+    <div class="thumb">
+      <img class="thumb-img" alt="" />
+      <span class="thumb-ext"></span>
+      <span class="badge-done">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 6"></path></svg>
+      </span>
+      <span class="badge-err">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v5"></path><path d="M10.3 3.9 2.6 17.6A1.6 1.6 0 0 0 4 20h16a1.6 1.6 0 0 0 1.4-2.4L13.7 3.9a1.6 1.6 0 0 0-3.4 0Z"></path></svg>
+      </span>
+    </div>
+
+    <div class="row-info">
+      <div class="row-name"></div>
+      <div class="row-sub"></div>
+      <div class="row-progress">
+        <div class="bar-track"><div class="bar-fill"></div></div>
+        <span class="bar-pct"></span>
+      </div>
+    </div>
+
+    <div class="row-actions">
+      <select class="row-format" aria-label="Output format for this file"></select>
+      <button class="row-download" aria-label="Download">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11"></path><path d="M7 11l5 5 5-5"></path><path d="M5 20h14"></path></svg>
+      </button>
+      <button class="row-remove" aria-label="Remove">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+      </button>
+    </div>
+  </div>
+</template>
+
+<style>
+  .file-list.list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .file-list.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 12px;
+  }
+
+  .file-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 12px 14px;
+    animation: fadeUp 0.25s ease;
+  }
+  .file-list.grid .file-row {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .thumb {
+    position: relative;
+    width: 52px;
+    height: 52px;
+    border-radius: 10px;
+    flex: none;
+    overflow: hidden;
+    background: linear-gradient(135deg, #c9c9d2, #9a9aa4);
+  }
+  .file-list.grid .thumb {
+    width: 100%;
+    height: 120px;
+    margin: 0 auto;
+  }
+  .thumb-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .thumb-ext {
+    position: absolute;
+    left: 4px;
+    bottom: 4px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    padding: 1px 5px;
+    border-radius: 5px;
+  }
+  .badge-done,
+  .badge-err {
+    display: none;
+  }
+  .file-row.done .badge-done {
+    display: flex;
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--ok);
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #fff;
+  }
+  .file-row.error .badge-err {
+    display: flex;
+    position: absolute;
+    inset: 0;
+    background: rgba(210, 59, 54, 0.16);
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    color: var(--err);
+  }
+
+  .row-info {
+    flex: 1;
+    min-width: 0;
+  }
+  .row-name {
+    font-weight: 600;
+    font-size: 14.5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .row-sub {
+    font-size: 12.5px;
+    color: var(--muted);
+    margin-top: 3px;
+  }
+  .file-row.error .row-sub {
+    color: var(--err);
+    font-weight: 500;
+  }
+  .save {
+    color: var(--ok);
+    font-weight: 700;
+  }
+  .row-progress {
+    display: none;
+    margin-top: 8px;
+    align-items: center;
+    gap: 10px;
+  }
+  .file-row.converting .row-progress {
+    display: flex;
+  }
+  .file-row.converting .row-sub {
+    display: none;
+  }
+  .bar-track {
+    flex: 1;
+    height: 6px;
+    background: #ededf1;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .bar-fill {
+    height: 100%;
+    width: 0;
+    background: var(--acc);
+    border-radius: 6px;
+    transition: width 0.1s linear;
+  }
+  .bar-pct {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--muted);
+    min-width: 34px;
+    text-align: right;
+  }
+
+  .row-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: none;
+  }
+  .file-list.grid .row-actions {
+    justify-content: center;
+  }
+  .row-format {
+    appearance: none;
+    -webkit-appearance: none;
+    background: var(--fill);
+    border: 1px solid var(--line-2);
+    border-radius: 9px;
+    padding: 8px 12px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink);
+    cursor: pointer;
+  }
+  .row-download,
+  .row-remove {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--line-2);
+    background: #fff;
+    border-radius: 9px;
+    color: var(--muted);
+    cursor: pointer;
+  }
+  .row-download:hover {
+    border-color: var(--ok);
+    color: var(--ok);
+  }
+  .row-remove:hover {
+    border-color: var(--err);
+    color: var(--err);
+  }
+  .file-row:not(.done) .row-download {
+    display: none;
+  }
+  .file-row.converting .row-actions,
+  .file-row.error .row-format,
+  .file-row.error .row-download {
+    display: none;
+  }
+</style>
